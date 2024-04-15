@@ -77,3 +77,28 @@ __H1 (Alternative Hypothesis):__ There is an association between the two categor
    The Chi-Squared tests show a significant association between __Treatment__ and the __Gender__, __Family History__, __Mental Health Interview__, __Care Options__, __Self Employed__, __Coping Struggles__, and the __Growing Stress__ columns. This is because their P-value is less than the 0.05 significance level. So, I will be using these columns for my model.
 
 The Chi-Squared tests show no significant association between __Treatment__ and the __Mood Swings__, __Work Interest__, __Days Indoors__, __Social Weakness__, __Changes Habits__ , __Occupation__, and the __Mental Health History__ columns.
+
+
+## Train-Test Split & Basic Pipeline Set-up:
+Since all my columns are categorical and not ordered, I'll be using __One Hot Encoder__ to convert my data into numerical format. 
+
+I used __Train-Test Split__ with a holdout set and __Cross-Validation__. I used a 80/20 split for my training_validation set and holdout set. Then I used a 75/25 split to split the train_validation set into seperate training and validation sets. I also mapped my target variable (y) to be Yes = 1 and No = 0.
+
+__I labeled my TP, TN, FP, and FN as follows:__
+
+•	__True Positives (TP):__ The number of individuals who were correctly predicted to seek treatment for a mental illness (i.e., the model predicted "Yes" for treatment, and the actual value was also "Yes").
+
+•	__True Negatives (TN):__ The number of individuals who were correctly predicted not to seek treatment for a mental illness (i.e., the model predicted "No" for treatment, and the actual value was also "No").
+
+•	__False Positives (FP):__ The number of individuals who were incorrectly predicted to seek treatment for a mental illness (i.e., the model predicted "Yes" for treatment, but the actual value was "No").
+
+•	__False Negatives (FN):__ The number of individuals who were incorrectly predicted not to seek treatment for a mental illness (i.e., the model predicted "No" for treatment, but the actual value was "Yes").
+
+Since my dataset is balanced 50/50 now, I will be focusing on __Accuracy__ as my metric.
+
+At this time before preprocessing, I have 100,000 rows and 8 columns including my Target Column.
+
+I set up a basic pipeline with ColumnTransformer and One Hot Encoder as my preprocessor.
+
+
+## Models and Findings:
