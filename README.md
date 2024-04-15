@@ -111,7 +111,7 @@ After OneHotEncoder, my dataset contains 100,000 rows and 18 columns, including 
    ### BASELINE MODEL: LOGISTIC REGRESSION
    I chose Logistic Regression as my Baseline model because it's simple and quick to use and read. It's a great starting point to understand how the data might be read by the model.
    
-   I got an Accuracy score of 70.76% with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing very well to unseen data.  
+   I got an __Accuracy score__ of __70.76%__ with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing very well to unseen data.  
    
 The __TP__, __TN__, __FP__, __FN__ are all close to eachother as well.
 
@@ -135,4 +135,18 @@ __FN:__ Validation Set: __2,348__ -------- Holdout Set: __2,344__
    ### SECOND MODEL: RANDOM FOREST
    I choose Random Forest as my second model because it reduces the risk of overfitting and tends to have low bias because it builds many decision trees and makes predictions based on the majority vote from all the trees.
    
-   I got an increased Accuracy score of 72.68% with cross-validation ranging from 71.7% to 73.4%.
+   I got an increased __Accuracy score__ of __72.68%__ with cross-validation ranging from 71.7% to 73.4%.  The ROC Curve shows an 80% prediction rate for the model's ability to rank predictions correctly.  
+
+![ROC Curve Random Forest](Images/ROC_RandForest.png)
+
+   After __Hyperparameter Tuning__, I was able to see a slight increase in the __Accuracy Score__ going from the 72.68% to __72.85%__.  And the HyperTuned Holdset's Accuracy score of 71.92% means the model is continuously responding well to unseen data.  
+   
+![Confusion Matrix RF Hyper Val/Holdout](Images/cm_RandForest2.png)
+
+__TP:__ Original Validation Set: __8,286__ ------ Hyper Validation Set: __8,236__ ------ Hyper Holdout Set: __8,046__ 
+
+__TN:__ Original Validation Set: __6,250__ ------ Hyper Validation Set: __6,333__ ------ Hyper Holdout Set: __6,337__
+
+__FP:__ Original Validation Set: __3,734__ ------ Hyper Validation Set: __3,651__ ------ Hyper Holdout Set: __3,741__
+
+__FN:__ Original Validation Set: __1,730__ ------ Hyper Validation Set: __1,780__ ------ Hyper Holdout Set: __1,876__
