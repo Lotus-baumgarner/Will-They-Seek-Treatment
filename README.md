@@ -105,7 +105,11 @@ I set up a basic pipeline with ColumnTransformer and One Hot Encoder as my prepr
 
 
 ## Models and Findings:
-   I started with a Logistic Regression model as my Baseline. I got an Accuracy score of 70.76% with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing well to unseen data.  
+   #### BASELINE MODEL: LOGISTIC REGRESSION
+   I chose Logistic Regression as my Baseline model because it's simple and quick to use and read. It's a great starting point to understand how the data might be read by the model.
+   
+   I got an Accuracy score of 70.76% with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing very well to unseen data.  
+   
 The __TP__, __TN__, __FP__, __FN__ are all close to eachother as well.
 
 <p style="display: flex; justify-content: space-between;">
@@ -121,3 +125,11 @@ __FP:__ Validation Set: __3,499__ -------- Holdout Set: __3,603__
 
 __FN:__ Validation Set: __2,348__ -------- Holdout Set: __2,344__
 
+
+After OneHotEncoder, my dataset contains 100,000 rows and 18 columns, including the Treatment Column.
+
+
+   #### SECOND MODEL: RANDOM FOREST
+   I choose Random Forest as my second model because it reduces the risk of overfitting and tends to have low bias because it builds many decision trees and makes predictions based on the majority vote from all the trees.
+   
+   I got an increased Accuracy score of 72.68% with cross-validation ranging from 71.7% to 73.4%.
