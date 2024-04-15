@@ -103,6 +103,9 @@ At this time before preprocessing, I have 100,000 rows and 8 columns including m
 
 I set up a basic pipeline with ColumnTransformer and One Hot Encoder as my preprocessor.
 
+After OneHotEncoder, my dataset contains 100,000 rows and 18 columns, including the Treatment Column.
+
+
 
 ## Models and Findings:
    ### BASELINE MODEL: LOGISTIC REGRESSION
@@ -126,7 +129,7 @@ __FP:__ Validation Set: __3,499__ -------- Holdout Set: __3,603__
 __FN:__ Validation Set: __2,348__ -------- Holdout Set: __2,344__
 
 
-After OneHotEncoder, my dataset contains 100,000 rows and 18 columns, including the Treatment Column.
+
 
 
    ### SECOND MODEL: RANDOM FOREST
