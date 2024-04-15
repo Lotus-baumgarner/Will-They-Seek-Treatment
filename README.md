@@ -76,13 +76,13 @@ __H1 (Alternative Hypothesis):__ There is an association between the two categor
    
    The Chi-Squared tests show a significant association between __Treatment__ and the __Gender__, __Family History__, __Mental Health Interview__, __Care Options__, __Self Employed__, __Coping Struggles__, and the __Growing Stress__ columns. This is because their P-value is less than the 0.05 significance level. So, I will be using these columns for my model.
 
-The Chi-Squared tests show no significant association between __Treatment__ and the __Mood Swings__, __Work Interest__, __Days Indoors__, __Social Weakness__, __Changes Habits__ , __Occupation__, and the __Mental Health History__ columns.
+   The Chi-Squared tests show no significant association between __Treatment__ and the __Mood Swings__, __Work Interest__, __Days Indoors__, __Social Weakness__, __Changes Habits__ , __Occupation__, and the __Mental Health History__ columns.
 
 
 ## Train-Test Split & Basic Pipeline Set-up:
-Since all my columns are categorical and not ordered, I'll be using __One Hot Encoder__ to convert my data into numerical format. 
+   Since all my columns are categorical and not ordered, I'll be using __One Hot Encoder__ to convert my data into numerical format. 
 
-I used __Train-Test Split__ with a holdout set and __Cross-Validation__. I used a 80/20 split for my training_validation set and holdout set. Then I used a 75/25 split to split the train_validation set into seperate training and validation sets. I also mapped my target variable (y) to be Yes = 1 and No = 0.
+   I used __Train-Test Split__ with a holdout set and __Cross-Validation__. I used a 80/20 split for my training_validation set and holdout set. Then I used a 75/25 split to split the train_validation set into seperate training and validation sets. I also mapped my target variable (y) to be Yes = 1 and No = 0.
 
 __I labeled my TP, TN, FP, and FN as follows:__
 
@@ -102,3 +102,16 @@ I set up a basic pipeline with ColumnTransformer and One Hot Encoder as my prepr
 
 
 ## Models and Findings:
+   I started with a Logistic Regression model as my Baseline. I got an Accuracy score of 70.76% with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing well to unseen data.  
+The __TP__, __TN__, __FP__, __FN__ are all close to eachother as well.
+
+ENTER PICTURES: CM1 and CMHOLDOUT1
+
+__TP:__ Validation Set: __7,668__ -------- Holdout Set: __7,578__ 
+
+__TN:__ Validation Set: __6,485__ -------- Holdout Set: __6,475__
+
+__FP:__ Validation Set: __3,499__ -------- Holdout Set: __3,603__
+
+__FN:__ Validation Set: __2,348__ -------- Holdout Set: __2,344__
+
