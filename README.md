@@ -44,7 +44,10 @@
     
    I compared a few other columns to Treatment using bar charts such as Family History of Mental Health and Awareness of Care Options. 
    
-   ENTER PICTURE-Treat vs FamHist and Treat vs Awareness
+<p float="left">
+  <img src="Treatment_Vs_FamHist.png" width="400" />
+  <img src="Treatment_Vs_Awareness.png" width="400" /> 
+</p>
    
    Since my Data Frame is entirely categorical values, I decided to create a for loop to preform a __Chi-Squared test__ on each column versus Treatment to determine which features correlate the most with my target variable.
 
