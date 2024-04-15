@@ -37,4 +37,42 @@
 
 
 ## EDAs, Down Sampling and Feature Selection:
+   I dropped the Timestamps column, kept only the United States cases, and I simply dropped the nulls from Self Employed. This left me roughly 168,000 rows across 16 columns.
+    From there I decided to downsize the dataset by down sampling the target variable Treatment to include 50,000 Yes's and 50,000 No's.
     
+   ENTER PICTURE-Treatment Value Counts
+    
+   I compared a few other columns to Treatment using bar charts such as Family History of Mental Health and Awareness of Care Options. 
+   
+   ENTER PICTURE-Treat vs FamHist and Treat vs Awareness
+   
+   Since my Data Frame is entirely categorical values, I decided to create a for loop to preform a __Chi-Squared test__ on each column versus Treatment to determine which features correlate the most with my target variable.
+
+I Formulated a single Hypotheses for each pair of variables.
+
+__H0 (Null Hypothesis):__ There is no association between the two categorical variables (example: between treatment and Occupation).
+
+__H1 (Alternative Hypothesis):__ There is an association between the two categorical variables.
+
+   Here are a few of the results. The full results can be seen in the EDAs-Feature Selection Notebook.
+   __Variable:__ Gender
+   __Chi-Squared Statistic:__ 2399.6832634032644
+   __P-value:__ 0.00000
+   __Degrees of Freedom:__ 1
+   __Decision:__ Reject the null hypothesis - There is a significant association between the variables.
+    
+   __Variable:__ Growing_Stress
+   __Chi-Squared Statistic:__ 10.151899207838625
+   __P-value:__ 0.00625
+   __Degrees of Freedom:__ 2
+   __Decision:__ Reject the null hypothesis - There is a significant association between the variables.
+   
+   __Variable:__ Social_Weakness
+   __Chi-Squared Statistic:__ 0.6468916752472398
+   __P-value:__ 0.72365
+   __Degrees of Freedom:__ 2
+   __Decision:__ Fail to reject the null hypothesis - There is no significant association between the variables.
+   
+   The Chi-Squared tests show a significant association between __Treatment__ and the __Gender__, __Family History__, __Mental Health Interview__, __Care Options__, __Self Employed__, __Coping Struggles__, and the __Growing Stress__ columns. This is because their P-value is less than the 0.05 significance level. So, I will be using these columns for my model.
+
+The Chi-Squared tests show no significant association between __Treatment__ and the __Mood Swings__, __Work Interest__, __Days Indoors__, __Social Weakness__, __Changes Habits__ , __Occupation__, and the __Mental Health History__ columns.
