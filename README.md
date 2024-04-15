@@ -16,7 +16,7 @@
 
    The features are all clear and defined and the overall data looks clean. The data is in a CSV format. It consists of just under 300,000 rows and 17 columns. The data types are all objects and are mostly strings or booleans.
    
-   ### Column Explanations:
+   #### Column Explanations:
 1. __Timestamp__ - Time survey was submitted.
 2. __Gender__ - Respondent's Gender.
 3. __Country__ - Respondent's Country.
@@ -36,4 +36,5 @@
 17. __Care Options__ - Respondent's awareness of mental health care options available?
 
 
-
+## EDAs, Down Sampling and Feature Selection:
+    
