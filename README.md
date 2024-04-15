@@ -176,5 +176,5 @@ __FN:__ Original Validation Set: __1,730__ ------ Hyper Validation Set: __1,780_
 
 
 
-   ### MODEL BLENDING:
+   ### MODEL STACKING:
    
