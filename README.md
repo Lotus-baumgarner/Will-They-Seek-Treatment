@@ -108,7 +108,10 @@ I set up a basic pipeline with ColumnTransformer and One Hot Encoder as my prepr
    I started with a Logistic Regression model as my Baseline. I got an Accuracy score of 70.76% with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing well to unseen data.  
 The __TP__, __TN__, __FP__, __FN__ are all close to eachother as well.
 
-ENTER PICTURES: CM1 and CMHOLDOUT1
+<p style="display: flex; justify-content: space-between;">
+  <img src="Images/cm1_LogReg.png" style="width: 49%; margin-right: 2%;" />
+  <img src="Images/cmHoldout1_LogReg.png" style="width: 49%;" />
+</p>
 
 __TP:__ Validation Set: __7,668__ -------- Holdout Set: __7,578__ 
 
