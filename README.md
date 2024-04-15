@@ -137,7 +137,10 @@ __FN:__ Validation Set: __2,348__ -------- Holdout Set: __2,344__
    
    I got an increased __Accuracy score__ of __72.68%__ with cross-validation ranging from 71.7% to 73.4%.  The __ROC Curve__ shows an __80.25%__ prediction rate for the model's ability to rank predictions correctly.  
 
-![ROC Curve Random Forest](Images/ROC_RandForest.png)
+<p style="display: flex; justify-content: space-between;">
+  <img src="Images/cm2_RandForest.png" style="width: 49%; margin-right: 2%;" />
+  <img src="Images/ROC_RandForest.png" style="width: 49%;" />
+</p> 
 
    After __Hyperparameter Tuning__, I was able to see a slight increase in the __Accuracy Score__ going from the 72.68% to __72.85%__.  And the HyperTuned Holdset's Accuracy score of 71.92% means the model is continuously responding well to unseen data.  
    
