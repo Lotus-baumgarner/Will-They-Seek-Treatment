@@ -40,7 +40,7 @@
    I dropped the Timestamps column, kept only the United States cases, and I simply dropped the nulls from Self Employed. This left me roughly 168,000 rows across 16 columns.
     From there I decided to downsize the dataset by down sampling the target variable Treatment to include 50,000 Yes's and 50,000 No's.
     
-   ENTER PICTURE-Treatment Value Counts
+   ![Treatment Value Count](Images/Treatment_Value_Count.png)
     
    I compared a few other columns to Treatment using bar charts such as Family History of Mental Health and Awareness of Care Options. 
    
