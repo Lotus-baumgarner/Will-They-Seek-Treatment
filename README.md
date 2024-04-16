@@ -120,6 +120,8 @@ The __TP__, __TN__, __FP__, __FN__ and ROC Curve can be seen below.
   <img src="Images/ROC_LogReg.png" style="width: 49%;" />
 </p>
 
+__AUC-ROC:__ 0.7711406215460384  
+
 __TP:__ __7,578__ -------- __FP:__ __3,603__
 
 __TN:__ __6,475__ -------- __FN:__ __2,344__
