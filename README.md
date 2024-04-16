@@ -60,20 +60,20 @@ __H1 (Alternative Hypothesis):__ There is an association between the two categor
    Here are a few of the results. The full results can be seen in the EDAs-Feature Selection Notebook.
    
    __Variable:__ Gender  
-   __Chi-Squared Statistic:__ 2399.6832634032644  
+   __Chi-Squared Statistic:__ 3845.8314875652886  
    __P-value:__ 0.00000  
    __Degrees of Freedom:__ 1  
    __Decision:__ Reject the null hypothesis - There is a significant association between the variables.  
     
    __Variable:__ Growing_Stress  
-   __Chi-Squared Statistic:__ 10.151899207838625  
-   __P-value:__ 0.00625  
+   __Chi-Squared Statistic:__ 12.278386359950051  
+   __P-value:__ 0.00216  
    __Degrees of Freedom:__ 2  
    __Decision:__ Reject the null hypothesis - There is a significant association between the variables.  
    
    __Variable:__ Social_Weakness  
-   __Chi-Squared Statistic:__ 0.6468916752472398  
-   __P-value:__ 0.72365  
+   __Chi-Squared Statistic:__ 0.3011255891171178  
+   __P-value:__ 0.86022  
    __Degrees of Freedom:__ 2  
    __Decision:__ Fail to reject the null hypothesis - There is no significant association between the variables.  
    
