@@ -141,17 +141,22 @@ __TN:__ __6,475__ -------- __FN:__ __2,344__
   <img src="Images/ROC-RandForest.png" style="width: 49%;" />
 </p> 
 
-   After __Hyperparameter Tuning__, I was able to see a slight increase in the __Accuracy Score__ going from the 72.68% to __72.85%__.  And the HyperTuned Holdset's Accuracy score of 71.92% means the model is continuously responding well to unseen data.  
+   After __Hyperparameter Tuning__, I was able to see a VERY small increase in the __Accuracy Score__ on the Training and Test Set. 
    
-![Confusion Matrix RF Hyper Val/Holdout](Images/cm-RandForest2.png)
+![Confusion Matrix RF HyperTuned Test](Images/cmHyp2-RandForest.png)
 
-__TP:__ Original Validation Set: __8,286__ ------ Hyper Validation Set: __8,236__ ------ Hyper Holdout Set: __8,046__ 
+__Original Training Set:__ 72.75875% ------ __HyperTuned Training Set:__ 72.76%  
+__Original Testing Set:__  71.91%    ------ __HyperTuned Testing Set:__  71.915%  
 
-__TN:__ Original Validation Set: __6,250__ ------ Hyper Validation Set: __6,333__ ------ Hyper Holdout Set: __6,337__
+The TP, TN, FP, FN show some variation between the Original Testing set and the HyperTuned Testing set.
 
-__FP:__ Original Validation Set: __3,734__ ------ Hyper Validation Set: __3,651__ ------ Hyper Holdout Set: __3,741__
+__TP:__ Original Test Set: __8,006__ ------ HyperTuned Test Set: __8,046__  
 
-__FN:__ Original Validation Set: __1,730__ ------ Hyper Validation Set: __1,780__ ------ Hyper Holdout Set: __1,876__
+__TN:__ Original Test Set: __6,376__ ------ HyperTuned Test Set: __6,337__  
+
+__FP:__ Original Test Set: __3,702__ ------ HyperTuned Test Set: __3,741__  
+
+__FN:__ Original Test Set: __1,916__ ------ HyperTuned Test Set: __1,876__  
 
 
 
@@ -163,13 +168,13 @@ __FN:__ Original Validation Set: __1,730__ ------ Hyper Validation Set: __1,780_
    The XGB Classifier __Accuracy score__ (__72.72%__) falls between the Orginal Random Forest model (72.68%) and the HyperTuned Random Forest Model (72.85%) in the sense of overall accuracy. And the __ROC Curve__ shows an __80.23%__ prediction rate for the model's ability to rank predictions correctly. Which is almost identical to the Random Forest ROC score.
    
 <p style="display: flex; justify-content: space-between;">
-  <img src="Images/cm3_XGBClass.png" style="width: 49%; margin-right: 2%;" />
-  <img src="Images/ROC_XGBClass.png" style="width: 49%;" />
+  <img src="Images/cm3-XGBClass.png" style="width: 49%; margin-right: 2%;" />
+  <img src="Images/ROC-XGBClass.png" style="width: 49%;" />
 </p> 
    
    After __Hyperparameter Tuning__, the model does again show a slight increase in the __Accuracy score__ going from 72.72% to __72.99%__.  The Holdout set's Accuracy score is 71.89% indicating that the model is still generalizing well to unseen data.  So far, this does seem to be my best model.
    
-![Confusion Matrix XGB Hyper Val/Holdout](Images/cm_XGBClass2.png)   
+![Confusion Matrix XGB Hyper Val/Holdout](Images/cmHyp3-XGBClass.png)   
 
 
 
