@@ -165,7 +165,7 @@ __FN:__ Original Test Set: __1,916__ ------ HyperTuned Test Set: __1,876__
    ### THIRD MODEL: XGB CLASSIFIER
    I chose Extreme Gradient Boosting (XGB) classifier as my third model because although it is also an ensemble method based on decision trees, it has advanced features that Random Forest does not. Such as Gradient Boosting, Regularization, and built in Cross-Validation.
    
-   The XGB Classifier __Accuracy score__ (__72.72%__) falls between the Orginal Random Forest model (72.68%) and the HyperTuned Random Forest Model (72.85%) in the sense of overall accuracy. And the __ROC Curve__ shows an __80.23%__ prediction rate for the model's ability to rank predictions correctly. Which is almost identical to the Random Forest ROC score.
+   The XGB Classifier __Accuracy score__ (__71.92%__) is identical to the HyperTuned Random Forest Model (also 71.92%) in the sense of overall accuracy. And the __ROC Curve__ shows an __79.53%__ prediction rate for the model's ability to rank predictions correctly. 
    
 <p style="display: flex; justify-content: space-between;">
   <img src="Images/cm3-XGBClass.png" style="width: 49%; margin-right: 2%;" />
