@@ -172,10 +172,17 @@ __FN:__ Original Test Set: __1,916__ ------ HyperTuned Test Set: __1,876__
   <img src="Images/ROC-XGBClass.png" style="width: 49%;" />
 </p> 
    
-   After __Hyperparameter Tuning__, the model does again show a slight increase in the __Accuracy score__ going from 72.72% to __72.99%__.  The Holdout set's Accuracy score is 71.89% indicating that the model is still generalizing well to unseen data.  So far, this does seem to be my best model.
+   After __Hyperparameter Tuning__, the model this time showed a slight decrease in the __Accuracy score__ going from 71.92% to __71.89%__.  So far, this does seem to be my best model. It has the least amount of False Positives out of all the models(HyperTuned and Originals) except my baseline model which only had 3,603 False Positives.  
    
-![Confusion Matrix XGB Hyper Val/Holdout](Images/cmHyp3-XGBClass.png)   
+![Confusion Matrix XGB HyperTuned Test](Images/cmHyp3-XGBClass.png)   
 
+__TP:__ Original Test Set: __8,046__ ------ HyperTuned Test Set: __7,997__  
+
+__TN:__ Original Test Set: __6,337__ ------ HyperTuned Test Set: __6,380__  
+
+__FP:__ Original Test Set: __3,741__ ------ HyperTuned Test Set: __3,698__  
+
+__FN:__ Original Test Set: __1,876__ ------ HyperTuned Test Set: __1,925__  
 
 
 
