@@ -38,7 +38,7 @@
 
 ## EDAs, Down Sampling and Feature Selection:
    I dropped the Timestamps column, kept only the United States cases, and I simply dropped the nulls from Self Employed. This left me roughly 168,000 rows across 16 columns.
-    From there I decided to downsize the dataset by down sampling the target variable Treatment to include 50,000 Yes's and 50,000 No's.
+    From there I decided to downsize the dataset by down sampling the target variable Treatment to include 77,106 Yes's and 77,106 No's.
     
    ![Treatment Value Count](Images/Treatment_Value_Counts.png)
     
@@ -85,7 +85,7 @@ __H1 (Alternative Hypothesis):__ There is an association between the two categor
 ## Train-Test Split & Basic Pipeline Set-up:
    Since all my columns are categorical and not ordered, I'll be using __One Hot Encoder__ to convert my data into numerical format. 
 
-   I used __Train-Test Split__ with a holdout set and __Cross-Validation__. I used a 80/20 split for my training_validation set and holdout set. Then I used a 75/25 split to split the train_validation set into seperate training and validation sets. I also mapped my target variable (y) to be Yes = 1 and No = 0.
+   I used __Train-Test Split__ with an 80/20 split and __Cross-Validation__. I also mapped my target variable (y) to be __Yes = 1__ and __No = 0.__  
 
 __I labeled my TP, TN, FP, and FN as follows:__
 
@@ -99,34 +99,30 @@ __I labeled my TP, TN, FP, and FN as follows:__
 
 Since my dataset is balanced 50/50 now, I will be focusing on __Accuracy__ as my metric.
 
-At this time before preprocessing, I have 100,000 rows and 8 columns including my Target Column.
+At this time before preprocessing, I have just over 154,000 rows and 8 columns including my Target Column.
 
 I set up a basic pipeline with ColumnTransformer and One Hot Encoder as my preprocessor.
 
-After OneHotEncoder, my dataset contains 100,000 rows and 18 columns, including the Treatment Column.
+After OneHotEncoder, my dataset contains 18 columns, including the Treatment Column (Which did not get encoded).
 
 
 
 ## Models and Findings:
    ### BASELINE MODEL: LOGISTIC REGRESSION
-   I chose Logistic Regression as my Baseline model because it's simple and quick to use and read. It's a great starting point to understand how the data might be read by the model.
+   I chose Logistic Regression as my Baseline model because it's simple and quick to use and easy to read. It's a great starting point to understand how the data might be read by the model.
    
-   I got an __Accuracy score__ of __70.76%__ with cross-validation scores ranging from 70.3% to 71.6%.  The Scores on the Holdout were very similar with an accuracy score of 70.26%, which means the model is generalizing very well to unseen data.  
+   I got an __Accuracy score__ of __70.26%__  on the Test Set. And a score of __70.84%__ with cross-validation scores ranging from 70.3% to 71.6% on the Training Set. This means the model is generalizing very well to unseen data.  
    
-The __TP__, __TN__, __FP__, __FN__ are all close to eachother as well.
+The __TP__, __TN__, __FP__, __FN__ and ROC Curve can be seen below.
 
 <p style="display: flex; justify-content: space-between;">
   <img src="Images/cm1_LogReg.png" style="width: 49%; margin-right: 2%;" />
-  <img src="Images/cmHoldout1_LogReg.png" style="width: 49%;" />
+  <img src="Images/ROC_LogReg.png" style="width: 49%;" />
 </p>
 
-__TP:__ Validation Set: __7,668__ -------- Holdout Set: __7,578__ 
+__TP:__ __7,578__ -------- __FP:__ __3,603__
 
-__TN:__ Validation Set: __6,485__ -------- Holdout Set: __6,475__
-
-__FP:__ Validation Set: __3,499__ -------- Holdout Set: __3,603__
-
-__FN:__ Validation Set: __2,348__ -------- Holdout Set: __2,344__
+__TN:__ __6,475__ -------- __FN:__ __2,344__
 
 
 
