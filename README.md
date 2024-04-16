@@ -111,33 +111,33 @@ After OneHotEncoder, my dataset contains 18 columns, including the Treatment Col
    ### BASELINE MODEL: LOGISTIC REGRESSION
    I chose Logistic Regression as my Baseline model because it's simple and quick to use and easy to read. It's a great starting point to understand how the data might be read by the model.
    
-   I got an __Accuracy score__ of __70.26%__  on the Test Set. And a score of __70.84%__ with cross-validation scores ranging from 70.3% to 71.6% on the Training Set. This means the model is generalizing very well to unseen data.  
+   I got an __Accuracy score__ of __70.62%__  on the Test Set. And a score of __70.67%__ with cross-validation scores ranging from 70.3% to 71.4% on the Training Set. This means the model is generalizing very well to unseen data.  
    
 The __TP__, __TN__, __FP__, __FN__ and ROC Curve can be seen below.
 
 <p style="display: flex; justify-content: space-between;">
-  <img src="Images/cm1_LogReg.png" style="width: 49%; margin-right: 2%;" />
-  <img src="Images/ROC_LogReg.png" style="width: 49%;" />
+  <img src="Images/cm1-LogReg.png" style="width: 49%; margin-right: 2%;" />
+  <img src="Images/ROC-LogReg.png" style="width: 49%;" />
 </p>
 
 __AUC-ROC:__ 0.7711406215460384  
 
-__TP:__ __7,578__ -------- __FP:__ __3,603__
+__TP:__ __11,706__ -------- __FP:__ __5,431__
 
-__TN:__ __6,475__ -------- __FN:__ __2,344__
+__TN:__ __10,074__ -------- __FN:__ __3,632__
 
 
 
 
 
    ### SECOND MODEL: RANDOM FOREST
-   I chose Random Forest as my second model because it reduces the risk of overfitting and tends to have low bias because it builds many decision trees and makes predictions based on the majority vote from all the trees.
+   I chose Random Forest as my second model because it reduces the risk of overfitting and tends to have low bias. It builds a lot of decision trees and makes predictions based on the majority vote from all the trees.
    
-   I got an increased __Accuracy score__ of __72.68%__ with cross-validation ranging from 71.7% to 73.4%.  The __ROC Curve__ shows an __80.25%__ prediction rate for the model's ability to rank predictions correctly.  
+   I got an increased __Accuracy score__ of __72.27%__ on the Test Set. And an increased score of __72.71%__ with cross-validation ranging from 71.9% to 73.2%.  The __ROC Curve__ shows an __80.25%__ prediction rate for the model's ability to rank predictions correctly.  
 
 <p style="display: flex; justify-content: space-between;">
-  <img src="Images/cm2_RandForest.png" style="width: 49%; margin-right: 2%;" />
-  <img src="Images/ROC_RandForest.png" style="width: 49%;" />
+  <img src="Images/cm2-RandForest.png" style="width: 49%; margin-right: 2%;" />
+  <img src="Images/ROC-RandForest.png" style="width: 49%;" />
 </p> 
 
    After __Hyperparameter Tuning__, I was able to see a slight increase in the __Accuracy Score__ going from the 72.68% to __72.85%__.  And the HyperTuned Holdset's Accuracy score of 71.92% means the model is continuously responding well to unseen data.  
