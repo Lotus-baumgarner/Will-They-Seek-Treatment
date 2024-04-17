@@ -250,10 +250,10 @@ My __Next Steps__ include:
  
  ## Repository Structure
 
-├── Data # Contains all datasets used in the project  
-├── Images # Stores images for use in documentation and notebooks  
-├── .gitignore # Specifies intentionally untracked files to ignore  
-├── EDAs-Feature Selection Notebook.ipynb # notebook for EDAs and feature selection  
-├── Models-Conclusions.ipynb # Jupyter notebook for modeling and conclusions  
-└── README.md # Project overview and setup instructions   
+├── Data  
+├── Images  
+├── .gitignore  
+├── EDAs-Feature Selection.ipynb   
+├── Models-Conclusions.ipynb    
+└── README.md  
 
