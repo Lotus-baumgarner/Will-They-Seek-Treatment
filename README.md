@@ -228,6 +228,8 @@ I plugged this back into Blocks 1-3 and determined the results weren't what I wa
 
 __KNN-Neighbors=25:__ --- __Accuracy:__ = 70.265%
 
-![Confusion Matrix KNN-N25 Meta Test](Images/CM-KNN-Meta-N25.png)
-
+<p style="display: flex; justify-content: space-between;">
+  <img src="Images/CM-KNN-Meta-N10.png" style="width: 49%; margin-right: 2%;" />
+  <img src="Images/CM-KNN-Meta-N25.png" style="width: 49%;" />
+</p> 
 I decided to use Blocks 1-3 to test the other Number of Neighbors manually. I listed several of the results inside the Models-Conclusions Notebook. Overall, I found that 10 Neighbors seemed to produce the most wanted results. And decided to use it as my final model for my Meta-Model.
