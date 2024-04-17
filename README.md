@@ -245,7 +245,7 @@ In __conclusion__, although I was able to raise my overall accuracy scores by ma
 My __Next Steps__ include:
 * Rerunning my models and focusing on Feature Importance to try to improve my overall scores,
 * Adding in an interactive Visualization that shows feature correlation,
-* Deploying the model with appropiate warnings and resources available
+* Deploying the model with appropriate warnings and resources available
  
  
  ## Repository Structure
