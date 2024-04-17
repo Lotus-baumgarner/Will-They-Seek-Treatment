@@ -188,4 +188,46 @@ __FN:__ Original Test Set: __1,876__ ------ HyperTuned Test Set: __1,925__
 
 
    ### MODEL STACKING:
-   
+   I decided to try to stack my models together to try to acheive better results.
+
+I started by defining the "Base Models" as the Logistic Regression model and the HyperTuned models for Random Forest and XGBoost.  I could not get Best_Model to work properly within the Meta Model, which is why I listed the Best Model's parameters out. Plus, I personally perfer to see the full list of parameters being used in each model. 
+
+__BLOCK 1:__ consists of:
+* Creating a Meta-Model as my final estimator,
+* Stacking the base models and final estimator using Stacking Classifier,
+* Establishing and Fitting the final pipeline AND
+* Calculating the Accuracy and Classification Report.
+                     
+__BLOCK 2:__ is the Visualization of the Confusion Matrix
+
+__BLOCK 3:__ is the Visualization of the ROC Curve
+
+I used these three blocks to plug and play with several different models and parameters to try to find the best one to use for my final model.
+
+I plugged and played with several different models and parameters as my Meta-Model.  The results for several of the models can be found inside the Models-Conclusions Notebook.  After running about 15 different models, my final decision was between K-Nearest Neighbor (KNN) and Support Vector Classifier (SVC) which are listed below.
+
+__Support Vector Classifier:__ --- __Accuracy:__ = 72.21%  
+
+![Confusion Matrix SVC MetaModel Test](Images/CM-SVC-Meta.png)
+
+* __K-Nearest Neighbor:__ --- __Accuracy:__ = 67.72%
+
+![Confusion Matrix KNN-N10 Meta Test](Images/CM-KNN-Meta-N10.png)
+
+I decided to use the K-Nearest Neighbors for my Meta-Model instead of the others because out of all my models (including my original and Hypertuned models), it had the lowest number of False Positives and the highest number of True Negatives.  The Accuracy Score is lower than my other models but the ROC Curve has a 76% prediction rate for the model's ability to rank predictions correctly.  
+
+I used the True Negatives and False Positives as my deciding factor because they are what my model needs to focus on the most.  I want my model to predict those individuals unlikely to seek treatment for themselves, more so than those who are willing to seek treatment on their own.
+
+From here I wanted to see if there was a better Number of Neighbors parameter I could use for it, since my current setting was n_neighbors=10.
+
+I created a new KNN model and plugged it into my original Preprocessing Pipeline.  I then ran GridSearchCV to find the best Number of Neighbors between 1 and 31 for my model.  
+
+It gave n_neighbors=25 as the best parameter.
+
+I plugged this back into Blocks 1-3 and determined the results weren't what I was looking for. It dropped my True Negatives and raised my False Positives.
+
+__KNN-Neighbors=25:__ --- __Accuracy:__ = 70.265%
+
+![Confusion Matrix KNN-N25 Meta Test](Images/CM-KNN-Meta-N25.png)
+
+I decided to use Blocks 1-3 to test the other Number of Neighbors manually. I listed several of the results inside the Models-Conclusions Notebook. Overall, I found that 10 Neighbors seemed to produce the most wanted results. And decided to use it as my final model for my Meta-Model.
