@@ -187,7 +187,7 @@ __FN:__ Original Test Set: __1,876__ ------ HyperTuned Test Set: __1,925__
 
 
 
-   ### MODEL STACKING:
+## MODEL STACKING:
    I decided to try to stack my models together to try to acheive better results.
 
 I started by defining the "Base Models" as the Logistic Regression model and the HyperTuned models for Random Forest and XGBoost.  I could not get Best_Model to work properly within the Meta Model, which is why I listed the Best Model's parameters out. Plus, I personally perfer to see the full list of parameters being used in each model. 
@@ -233,3 +233,17 @@ __KNN-Neighbors=25:__ --- __Accuracy:__ = 70.265%
   <img src="Images/CM-KNN-Meta-N25.png" style="width: 49%;" />
 </p> 
 I decided to use Blocks 1-3 to test the other Number of Neighbors manually. I listed several of the results inside the Models-Conclusions Notebook. Overall, I found that 10 Neighbors seemed to produce the most wanted results. And decided to use it as my final model for my Meta-Model.
+
+
+
+
+
+## 6. Conclusion and Next Steps:
+
+In __conclusion__, although I was able to raise my overall accuracy scores by manipulated the models both inside and out of the Stacking Ensemble, I decided focusing on the model that produced the most True Negative and the least False Positives was my best choice.
+
+My __Next Steps__ include:
+* Rerunning my models and focusing on Feature Importance to try to imporve my overall scores,
+* Adding in an interactive Visualization that shows feature correlation,
+* Deploying the model with appropiate warnings and resources available
+ 
