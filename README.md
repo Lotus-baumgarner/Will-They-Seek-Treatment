@@ -247,3 +247,19 @@ My __Next Steps__ include:
 * Adding in an interactive Visualization that shows feature correlation,
 * Deploying the model with appropiate warnings and resources available
  
+ 
+ ## Repository Structure
+
+Below is an outline of the main components of the repository and their contents:
+
+- **/Data/**: This directory contains all the datasets used in the project.
+
+- **/Images/**: This directory stores images used in the notebooks and the README.
+
+- **EDAs-Feature Selection Notebook.ipynb**: This notebook contains exploratory data analysis and feature selection processes used to prepare the data for modeling.
+
+- **Models-Conclusions.ipynb**: This notebook includes the development of predictive models and conclusions drawn from the results.
+
+- **README.md**: This file provides an overview of the project.
+
+- **.gitignore**: This file lists all file types and directories that Git should ignore and not track.
