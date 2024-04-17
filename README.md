@@ -243,7 +243,7 @@ I decided to use Blocks 1-3 to test the other Number of Neighbors manually. I li
 In __conclusion__, although I was able to raise my overall accuracy scores by manipulated the models both inside and out of the Stacking Ensemble, I decided focusing on the model that produced the most True Negative and the least False Positives was my best choice.
 
 My __Next Steps__ include:
-* Rerunning my models and focusing on Feature Importance to try to imporve my overall scores,
+* Rerunning my models and focusing on Feature Importance to try to improve my overall scores,
 * Adding in an interactive Visualization that shows feature correlation,
 * Deploying the model with appropiate warnings and resources available
  
