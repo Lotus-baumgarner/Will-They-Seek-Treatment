@@ -250,16 +250,10 @@ My __Next Steps__ include:
  
  ## Repository Structure
 
-Below is an outline of the main components of the repository and their contents:
+├── Data # Contains all datasets used in the project
+├── Images # Stores images for use in documentation and notebooks
+├── EDAs-Feature Selection Notebook.ipynb # notebook for EDAs and feature selection
+├── Models-Conclusions.ipynb # Jupyter notebook for modeling and conclusions
+├── README.md # Project overview and setup instructions
+└── .gitignore # Specifies intentionally untracked files to ignore
 
-- **/Data/**: This directory contains all the datasets used in the project.
-
-- **/Images/**: This directory stores images used in the notebooks and the README.
-
-- **EDAs-Feature Selection Notebook.ipynb**: This notebook contains exploratory data analysis and feature selection processes used to prepare the data for modeling.
-
-- **Models-Conclusions.ipynb**: This notebook includes the development of predictive models and conclusions drawn from the results.
-
-- **README.md**: This file provides an overview of the project.
-
-- **.gitignore**: This file lists all file types and directories that Git should ignore and not track.
